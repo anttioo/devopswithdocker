@@ -1,0 +1,6 @@
+FROM node:10
+WORKDIR /usr/src/frontend-example
+COPY . .
+RUN npm install
+CMD npm start
+EXPOSE 5000

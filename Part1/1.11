@@ -1,0 +1,11 @@
+##Dockerfile
+FROM node:10
+WORKDIR /usr/src/backend-example
+COPY . .
+RUN npm install
+CMD npm start
+EXPOSE 8000
+
+##Commands
+docker build -t backend-example .
+docker run -v $(pwd)/logs.txt:/usr/src/backend-example/logs.txt -p 8000:8000 backend-example

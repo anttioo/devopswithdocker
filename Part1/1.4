@@ -1,0 +1,17 @@
+anttiollikkala@Anttis-MacBook-Pro Part1 % docker run -d devopsdockeruh/exec_bash_exercise
+271585072b52a68ecfc73bebb0cb883c2904ad4394c36dde3c41f58e5b6678ad
+anttiollikkala@Anttis-MacBook-Pro Part1 % docker exec -t -i 27 /bin/bash               
+root@271585072b52:/usr/app# tail -f ./logs.txt
+Sat, 11 Jan 2020 15:50:32 GMT
+Sat, 11 Jan 2020 15:50:35 GMT
+Sat, 11 Jan 2020 15:50:38 GMT
+Sat, 11 Jan 2020 15:50:41 GMT
+Secret message is:
+"Docker is easy"
+Sat, 11 Jan 2020 15:50:47 GMT
+Sat, 11 Jan 2020 15:50:50 GMT
+Sat, 11 Jan 2020 15:50:53 GMT
+Sat, 11 Jan 2020 15:50:56 GMT
+Secret message is:
+"Docker is easy"
+^X^C
