@@ -1,0 +1,24 @@
+version: '3'
+services:
+  front:
+    image: kurkkumopo-front
+    ports:
+      - 3000:3000
+    #container_name: frontend-example
+  train:
+    image: kurkkumopo-train
+    restart: always
+    volumes:
+      - model:/src/model
+  back:
+    image: kurkkumopo-back
+    ports:
+      - 5000:5000
+    volumes:
+      - imgs:/src/imgs
+      - model:/src/model
+    #container_name: backend-example
+
+volumes:
+  model:
+  imgs:

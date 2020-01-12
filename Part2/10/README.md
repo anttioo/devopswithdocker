@@ -1,0 +1,1 @@
+had to point the api url to docker machine address + /api

@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend-example:
+    image: frontend-example
+    ports:
+      - 5000:5000
+    #container_name: frontend-example
+  backend-example:
+    image: backend-example
+    ports:
+      - 8000:8000
+    volumes:
+      - ./logs.txt:/usr/src/backend-example/logs.txt
+    #container_name: backend-example
