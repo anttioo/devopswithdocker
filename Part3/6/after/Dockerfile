@@ -13,8 +13,9 @@ RUN go build -o ./docker-go-example cmd/docker-go-example/main.go && mkdir /usr/
 FROM bash
 COPY --from=0 /srv/www/docker-go-example /srv/www/docker-go-example
 COPY --from=1 /usr/libexec/docker-go-example /usr/libexec/docker-go-example
-ENTRYPOINT /usr/libexec/docker-go-example --assets /srv/www/docker-go-example/
-EXPOSE 80
+USER nobody
+ENTRYPOINT /usr/libexec/docker-go-example --assets /srv/www/docker-go-example/ --port 8080
+EXPOSE 8080
 
 
 
